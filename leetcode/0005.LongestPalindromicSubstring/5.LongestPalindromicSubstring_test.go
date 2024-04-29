@@ -7,12 +7,26 @@ import (
 )
 
 func TestLongestPalindrome(t *testing.T) {
-	result := longestPalindrome("babaddaba")
-	require.Equal(t, result, "abaddaba")
+	testCases := []struct {
+		str      string
+		expected string
+	}{
+		{
+			str:      "babaddaba",
+			expected: "abaddaba",
+		},
+		{
+			str:      "babad",
+			expected: "bab",
+		},
+		{
+			str:      "cbbd",
+			expected: "bb",
+		},
+	}
 
-	result = longestPalindrome("babad")
-	require.Equal(t, result, "bab")
-
-	result = longestPalindrome("cbbd")
-	require.Equal(t, result, "bb")
+	for _, tc := range testCases {
+		result := longestPalindrome(tc.str)
+		require.Equal(t, result, tc.expected)
+	}
 }

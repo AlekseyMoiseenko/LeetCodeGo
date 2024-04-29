@@ -7,9 +7,25 @@ import (
 )
 
 func TestAddBinary(t *testing.T) {
-	result := addBinary("11", "1")
-	require.Equal(t, result, "100")
+	testCases := []struct {
+		a        string
+		b        string
+		expected string
+	}{
+		{
+			a:        "11",
+			b:        "1",
+			expected: "100",
+		},
+		{
+			a:        "1010",
+			b:        "1011",
+			expected: "10101",
+		},
+	}
 
-	result = addBinary("1010", "1011")
-	require.Equal(t, result, "10101")
+	for _, tc := range testCases {
+		result := addBinary(tc.a, tc.b)
+		require.Equal(t, result, tc.expected)
+	}
 }

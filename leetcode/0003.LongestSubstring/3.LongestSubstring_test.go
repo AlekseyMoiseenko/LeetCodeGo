@@ -7,10 +7,26 @@ import (
 )
 
 func TestLengthOfLongestSubstring(t *testing.T) {
-	v := lengthOfLongestSubstring("abcabcbb")
-	require.Equal(t, v, 3)
-	v = lengthOfLongestSubstring("bbbbb")
-	require.Equal(t, v, 1)
-	v = lengthOfLongestSubstring("pwwkew")
-	require.Equal(t, v, 3)
+	testCases := []struct {
+		str      string
+		expected int
+	}{
+		{
+			str:      "abcabcbb",
+			expected: 3,
+		},
+		{
+			str:      "bbbbb",
+			expected: 1,
+		},
+		{
+			str:      "pwwkew",
+			expected: 3,
+		},
+	}
+
+	for _, tc := range testCases {
+		v := lengthOfLongestSubstring(tc.str)
+		require.Equal(t, v, tc.expected)
+	}
 }
