@@ -47,7 +47,7 @@ func threeSum(nums []int) [][]int {
 	return result
 }
 
-//time limit exceed
+// time limit exceed
 // func threeSum(nums []int) [][]int {
 // 	var result [][]int
 // 	numMap := make(map[[3]int]bool)
