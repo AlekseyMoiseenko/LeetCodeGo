@@ -1,9 +1,10 @@
 package leetcode
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+import (
+	"github.com/AlekseyMoiseenko/LeetCodeGo/util"
+)
+
+type ListNode = util.ListNode
 
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	var result = new(ListNode)

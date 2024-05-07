@@ -1,9 +1,8 @@
 package leetcode
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+import "github.com/AlekseyMoiseenko/LeetCodeGo/util"
+
+type ListNode = util.ListNode
 
 func deleteNode(node *ListNode) {
 	node.Val = node.Next.Val

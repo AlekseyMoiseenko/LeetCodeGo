@@ -1,9 +1,8 @@
 package leetcode
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+import "github.com/AlekseyMoiseenko/LeetCodeGo/util"
+
+type ListNode = util.ListNode
 
 func reverseList(head *ListNode) *ListNode {
 	var prev *ListNode
