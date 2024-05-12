@@ -30,6 +30,6 @@ func TestReverseList(t *testing.T) {
 		node := util.CreateListNode(tc.list)
 		node = reverseList(node)
 
-		require.Equal(t, true, util.IsEqualIntSlices(util.ListToInts(node), tc.expected))
+		require.Equal(t, util.ListToInts(node), tc.expected)
 	}
 }

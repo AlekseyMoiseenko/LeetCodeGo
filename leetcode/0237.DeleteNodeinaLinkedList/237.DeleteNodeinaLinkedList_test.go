@@ -31,6 +31,6 @@ func TestDeleteNode(t *testing.T) {
 
 		deleteNode(node)
 
-		require.Equal(t, true, util.IsEqualIntSlices(util.ListToInts(head), tc.expected))
+		require.Equal(t, util.ListToInts(head), tc.expected)
 	}
 }

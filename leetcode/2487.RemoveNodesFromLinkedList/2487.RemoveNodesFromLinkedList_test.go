@@ -30,6 +30,6 @@ func TestRemoveNodes(t *testing.T) {
 		node := util.CreateListNode(tc.list)
 		node = removeNodes(node)
 
-		require.Equal(t, true, util.IsEqualIntSlices(util.ListToInts(node), tc.expected))
+		require.Equal(t, tc.expected, util.ListToInts(node))
 	}
 }
