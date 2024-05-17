@@ -1,21 +1,30 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/AlekseyMoiseenko/LeetCodeGo/util"
+	"github.com/stretchr/testify/require"
 )
 
-// TODO: tests
 func TestEvaluateTree(t *testing.T) {
-	testTree := &TreeNode{
-		Val:  2,
-		Left: &TreeNode{Val: 1},
-		Right: &TreeNode{
-			Val:   3,
-			Left:  &TreeNode{Val: 0},
-			Right: &TreeNode{Val: 1},
+	testCases := []struct {
+		node     *TreeNode
+		expected bool
+	}{
+		{
+			node:     util.IntsToTreeNode([]int{2, 1, 3, util.NULL, util.NULL, 0, 1}),
+			expected: true,
+		},
+		{
+			node:     util.IntsToTreeNode([]int{0}),
+			expected: false,
 		},
 	}
-	res := evaluateTree(testTree)
-	fmt.Printf("res: %v\n", res)
+
+	for _, tc := range testCases {
+		res := evaluateTree(tc.node)
+
+		require.Equal(t, res, tc.expected)
+	}
 }

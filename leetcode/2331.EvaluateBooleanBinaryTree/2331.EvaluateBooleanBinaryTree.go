@@ -1,10 +1,8 @@
 package leetcode
 
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
+import "github.com/AlekseyMoiseenko/LeetCodeGo/util"
+
+type TreeNode = util.TreeNode
 
 func evaluateTree(root *TreeNode) bool {
 	switch root.Val {
