@@ -7,15 +7,35 @@ import (
 )
 
 func TestTwoSum(t *testing.T) {
-	indices := twoSum([]int{2, 7, 11, 15}, 9)
-	require.Equal(t, indices, []int{0, 1})
+	testCases := []struct {
+		list     []int
+		target   int
+		expected []int
+	}{
+		{
+			list:     []int{2, 7, 11, 15},
+			target:   9,
+			expected: []int{0, 1},
+		},
+		{
+			list:     []int{3, 2, 4},
+			target:   6,
+			expected: []int{1, 2},
+		},
+		{
+			list:     []int{3, 3},
+			target:   6,
+			expected: []int{0, 1},
+		},
+		{
+			list:     []int{1, 2, 3, 4},
+			target:   15,
+			expected: nil,
+		},
+	}
 
-	indices = twoSum([]int{3, 2, 4}, 6)
-	require.Equal(t, indices, []int{1, 2})
-
-	indices = twoSum([]int{3, 3}, 6)
-	require.Equal(t, indices, []int{0, 1})
-
-	indices = twoSum([]int{1, 2, 3, 4}, 15)
-	require.Nil(t, indices)
+	for _, tc := range testCases {
+		indices := twoSum(tc.list, tc.target)
+		require.Equal(t, tc.expected, indices)
+	}
 }

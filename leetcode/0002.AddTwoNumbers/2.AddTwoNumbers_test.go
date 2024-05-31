@@ -36,6 +36,6 @@ func TestAddTwoNumbers(t *testing.T) {
 
 		res := addTwoNumbers(l1, l2)
 
-		require.Equal(t, util.ListToInts(res), tc.expected)
+		require.Equal(t, tc.expected, util.ListToInts(res))
 	}
 }

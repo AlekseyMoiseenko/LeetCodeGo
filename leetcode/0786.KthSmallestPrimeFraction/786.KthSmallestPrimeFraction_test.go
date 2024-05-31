@@ -26,6 +26,6 @@ func TestKthSmallestPrimeFraction(t *testing.T) {
 
 	for _, tc := range testCases {
 		res := kthSmallestPrimeFraction(tc.list, tc.k)
-		require.Equal(t, res, tc.expected)
+		require.Equal(t, tc.expected, res)
 	}
 }

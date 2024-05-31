@@ -26,6 +26,6 @@ func TestDistributeCoins(t *testing.T) {
 		node := util.IntsToTreeNode(tc.intsTree)
 		res := distributeCoins(node)
 
-		require.Equal(t, res, tc.expected)
+		require.Equal(t, tc.expected, res)
 	}
 }

@@ -24,6 +24,6 @@ func TestPartition(t *testing.T) {
 	for _, tc := range testCases {
 		res := partition(tc.str)
 
-		require.Equal(t, res, tc.expected)
+		require.Equal(t, tc.expected, res)
 	}
 }

@@ -30,6 +30,6 @@ func TestMincostToHireWorkers(t *testing.T) {
 	for _, tc := range testCases {
 		res := mincostToHireWorkers(tc.quality, tc.wage, tc.k)
 
-		require.Equal(t, res, tc.expected)
+		require.Equal(t, tc.expected, res)
 	}
 }

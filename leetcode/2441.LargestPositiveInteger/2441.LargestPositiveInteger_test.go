@@ -26,6 +26,6 @@ func TestFindMaxK(t *testing.T) {
 	}
 	for _, tc := range testCases {
 		res := findMaxK(tc.nums)
-		require.Equal(t, res, tc.expected)
+		require.Equal(t, tc.expected, res)
 	}
 }

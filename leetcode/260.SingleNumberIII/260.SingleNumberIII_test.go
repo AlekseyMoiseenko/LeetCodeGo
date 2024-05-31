@@ -21,13 +21,13 @@ func TestSingleNumber(t *testing.T) {
 		},
 		{
 			list:     []int{0, 1},
-			expected: []int{1, 0},
+			expected: []int{0, 1},
 		},
 	}
 
 	for _, tc := range testCases {
 		res := singleNumber(tc.list)
 
-		require.Equal(t, res, tc.expected)
+		require.Equal(t, tc.expected, res)
 	}
 }

@@ -27,6 +27,6 @@ func TestLengthOfLongestSubstring(t *testing.T) {
 
 	for _, tc := range testCases {
 		v := lengthOfLongestSubstring(tc.str)
-		require.Equal(t, v, tc.expected)
+		require.Equal(t, tc.expected, v)
 	}
 }

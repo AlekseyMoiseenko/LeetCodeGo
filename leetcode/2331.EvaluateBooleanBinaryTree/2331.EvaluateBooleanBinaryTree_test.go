@@ -25,6 +25,6 @@ func TestEvaluateTree(t *testing.T) {
 	for _, tc := range testCases {
 		res := evaluateTree(tc.node)
 
-		require.Equal(t, res, tc.expected)
+		require.Equal(t, tc.expected, res)
 	}
 }

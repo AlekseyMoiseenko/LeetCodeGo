@@ -34,6 +34,6 @@ func TestRemoveLeafNodes(t *testing.T) {
 		node := util.IntsToTreeNode(tc.nodeList)
 		res := removeLeafNodes(node, tc.target)
 
-		require.Equal(t, util.TreeToInts(res), tc.expected)
+		require.Equal(t, tc.expected, util.TreeToInts(res))
 	}
 }

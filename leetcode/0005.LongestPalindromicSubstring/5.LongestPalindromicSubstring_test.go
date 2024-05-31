@@ -27,6 +27,6 @@ func TestLongestPalindrome(t *testing.T) {
 
 	for _, tc := range testCases {
 		result := longestPalindrome(tc.str)
-		require.Equal(t, result, tc.expected)
+		require.Equal(t, tc.expected, result)
 	}
 }

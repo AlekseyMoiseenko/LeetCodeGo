@@ -26,6 +26,6 @@ func TestAddBinary(t *testing.T) {
 
 	for _, tc := range testCases {
 		result := addBinary(tc.a, tc.b)
-		require.Equal(t, result, tc.expected)
+		require.Equal(t, tc.expected, result)
 	}
 }

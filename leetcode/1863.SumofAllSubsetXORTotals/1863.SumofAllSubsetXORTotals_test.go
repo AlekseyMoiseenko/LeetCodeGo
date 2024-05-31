@@ -24,6 +24,6 @@ func TestSubsetXORSum(t *testing.T) {
 	for _, tc := range testCases {
 		res := subsetXORSum(tc.list)
 
-		require.Equal(t, res, tc.expected)
+		require.Equal(t, tc.expected, res)
 	}
 }

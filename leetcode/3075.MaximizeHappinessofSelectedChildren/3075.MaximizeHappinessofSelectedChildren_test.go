@@ -37,6 +37,6 @@ func TestMaximumHappinessSum(t *testing.T) {
 	for _, tc := range testCases {
 		res := maximumHappinessSum(tc.list, tc.turns)
 
-		require.Equal(t, res, tc.expected)
+		require.Equal(t, tc.expected, res)
 	}
 }
