@@ -28,6 +28,6 @@ func TestSingleNumber(t *testing.T) {
 	for _, tc := range testCases {
 		res := singleNumber(tc.list)
 
-		require.Equal(t, tc.expected, res)
+		require.ElementsMatch(t, tc.expected, res)
 	}
 }
