@@ -13,6 +13,7 @@ func minIncrementForUnique(nums []int) int {
 			nums[i] = prev
 		}
 	}
+
 	return moves
 }
 
