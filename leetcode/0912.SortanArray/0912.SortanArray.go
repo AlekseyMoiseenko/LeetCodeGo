@@ -17,26 +17,13 @@ func sortArray(nums []int) []int {
 	}
 
 	index := 0
-	for v, c := range numsCount {
-		for c > 0 {
+	for v, count := range numsCount {
+		for count > 0 {
 			nums[index] = v + minVal
 			index++
-			c--
+			count--
 		}
 	}
 
 	return nums
 }
-
-// time limit
-// func sortArray(nums []int) []int {
-// 	for i := 0; i < len(nums)-1; i++ {
-// 		if nums[i] > nums[i+1] {
-// 			nums[i+1], nums[i] = nums[i], nums[i+1]
-// 			if i >= 1 {
-// 				i -= 2
-// 			}
-// 		}
-// 	}
-// 	return nums
-// }
