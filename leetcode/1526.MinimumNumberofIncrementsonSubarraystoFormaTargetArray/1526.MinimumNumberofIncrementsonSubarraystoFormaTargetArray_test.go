@@ -1,7 +1,6 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
 
 	"github.com/stretchr/testify/require"
@@ -36,7 +35,7 @@ func TestMinNumberOperations(t *testing.T) {
 
 	for _, tc := range testCases {
 		res := minNumberOperations(tc.target)
-		fmt.Println(res)
+
 		require.Equal(t, tc.expected, res)
 	}
 }
