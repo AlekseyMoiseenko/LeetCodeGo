@@ -1,4 +1,7 @@
 test:
 	go test -v -cover ./...
 
-.PHONY: test
+test_hash:
+	go test -v -cover ./leetcode/hash_table/...
+
+.PHONY: test test_hash
