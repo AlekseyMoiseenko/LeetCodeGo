@@ -28,10 +28,6 @@ func isHappy(n int) bool {
 }
 
 func splitNumber(n int) []int {
-	if n == 0 {
-		return []int{0}
-	}
-
 	digits := []int{}
 	for n > 0 {
 		digits = append(digits, n%10)
