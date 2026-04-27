@@ -3,7 +3,7 @@ package hash
 import "github.com/AlekseyMoiseenko/LeetCodeGo/util"
 
 // Time Complexity: O(n+m)
-// Space Complexity: O(1)
+// Space Complexity: O(n)
 func getIntersectionNode(headA, headB *util.ListNode) *util.ListNode {
 	m := make(map[*util.ListNode]struct{})
 
