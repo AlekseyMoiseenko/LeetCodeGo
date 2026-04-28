@@ -4,4 +4,7 @@ test:
 test_hash:
 	go test -v -cover ./leetcode/hash_table/...
 
-.PHONY: test test_hash
+test_sorting:
+	go test -v -cover ./leetcode/sorting/...
+
+.PHONY: test test_hash test_sorting
