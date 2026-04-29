@@ -7,4 +7,7 @@ test_hash:
 test_sorting:
 	go test -v -cover ./leetcode/sorting/...
 
-.PHONY: test test_hash test_sorting
+test_pointers:
+	go test -v -cover ./leetcode/two_pointers/...
+
+.PHONY: test test_hash test_sorting test_pointers

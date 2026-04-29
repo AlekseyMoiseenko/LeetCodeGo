@@ -4,13 +4,16 @@ import (
 	"sort"
 )
 
+// Sorting / Two Pointers
+// Time Complexity: O (n^2)
+// Space Complexity: O (log n)
 func threeSum(nums []int) [][]int {
 	result := [][]int{}
 
 	l := len(nums)
-	if l < 3 {
-		return result
-	}
+	// if l < 3 { // 3 <= nums.length
+	// 	return result
+	// }
 
 	sort.Ints(nums)
 
@@ -30,9 +33,9 @@ func threeSum(nums []int) [][]int {
 				for left < right && nums[left] == nums[left+1] {
 					left++
 				}
-				for left < right && nums[right] == nums[right-1] {
-					right--
-				}
+				// for left < right && nums[right] == nums[right-1] {
+				// 	right--
+				// }
 
 				left++
 				right--
