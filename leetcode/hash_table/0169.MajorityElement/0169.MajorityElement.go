@@ -4,7 +4,7 @@ import (
 	"sort"
 )
 
-// Time complexity: O(n)
+// Time complexity: O(n log n). (O(n log n) - sort, O(n) - array iterating)
 // Space complexity: O(1)
 func majorityElement(nums []int) int {
 	sort.Ints(nums)
