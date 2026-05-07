@@ -10,4 +10,7 @@ test_sorting:
 test_pointers:
 	go test -v -cover ./leetcode/two_pointers/...
 
+test_binary:
+	go test -v -cover ./leetcode/binary_search/...
+
 .PHONY: test test_hash test_sorting test_pointers
