@@ -36,6 +36,21 @@ func TestIsSameTree(t *testing.T) {
 			q:        util.IntsToTreeNode([]int{1, util.NULL, 2, util.NULL, 3, util.NULL, util.NULL}),
 			expected: false,
 		},
+		{
+			p:        nil,
+			q:        util.IntsToTreeNode([]int{1, 1, 2}),
+			expected: false,
+		},
+		{
+			p:        nil,
+			q:        nil,
+			expected: true,
+		},
+		{
+			p:        util.IntsToTreeNode([]int{1, 1, 2}),
+			q:        util.IntsToTreeNode([]int{1, 1, 3}),
+			expected: false,
+		},
 	}
 
 	for _, tc := range testCases {
