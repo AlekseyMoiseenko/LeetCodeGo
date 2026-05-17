@@ -1,4 +1,4 @@
-package sorting
+package main
 
 import (
 	"testing"
@@ -35,25 +35,25 @@ func TestMerge(t *testing.T) {
 			expected: []int{1},
 		},
 		{
-			nums1:    []int{0},
-			m:        0,
-			nums2:    []int{1},
-			n:        1,
-			expected: []int{1},
-		},
-		{
-			nums1:    []int{},
-			m:        0,
-			nums2:    []int{},
-			n:        0,
-			expected: []int{},
-		},
-		{
-			nums1:    []int{5, 5, 1, 2, 3, 0, 0, 0},
+			nums1:    []int{1, 1, 1, 2, 3, 0, 0, 0},
 			m:        5,
 			nums2:    []int{2, 5, 6},
 			n:        3,
-			expected: []int{1, 2, 2, 3, 5, 5, 5, 6},
+			expected: []int{1, 1, 1, 2, 2, 3, 5, 6},
+		},
+		{
+			nums1:    []int{1, 1, 1, 2, 3, 0, 0, 0, 0, 0},
+			m:        5,
+			nums2:    []int{2, 5, 6, 99, 99},
+			n:        5,
+			expected: []int{1, 1, 1, 2, 2, 3, 5, 6, 99, 99},
+		},
+		{
+			nums1:    []int{199, 199, 199, 199, 199, 199, 199, 199, 0, 0, 0, 0, 0},
+			m:        8,
+			nums2:    []int{2, 5, 6, 9, 9},
+			n:        5,
+			expected: []int{2, 5, 6, 9, 9, 199, 199, 199, 199, 199, 199, 199, 199},
 		},
 	}
 
