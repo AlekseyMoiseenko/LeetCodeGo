@@ -16,4 +16,7 @@ test_binary:
 test_dfs_bfs:
 	go test -v -cover ./leetcode/dfs_bfs/...
 
-.PHONY: test test_hash test_sorting test_pointers test_dfs_bfs
+test_backtracking:
+	go test -v -cover ./leetcode/backtracking/...
+
+.PHONY: test test_hash test_sorting test_pointers test_dfs_bfs test_backtracking
