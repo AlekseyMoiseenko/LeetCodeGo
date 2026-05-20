@@ -19,4 +19,7 @@ test_dfs_bfs:
 test_backtracking:
 	go test -v -cover ./leetcode/backtracking/...
 
-.PHONY: test test_hash test_sorting test_pointers test_dfs_bfs test_backtracking
+test_reservoir:
+	go test -v -cover ./leetcode/reservoir_sampling/...
+
+.PHONY: test test_hash test_sorting test_pointers test_dfs_bfs test_backtracking test_reservoir
