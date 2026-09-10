@@ -1,5 +1,8 @@
 package hash
 
+// Complexity
+// Time complexity: O (1)
+// Space complexity: O (1)
 func isValidSudoku(board [][]byte) bool {
 	rows := make([][]bool, 9)
 	cols := make([][]bool, 9)
